@@ -219,7 +219,7 @@ strong {
 .main-header {
   border-bottom: 4px solid var(--orange);
   width: 100%;
-  height: 500px;
+  height: 400px;
   display: flex;
   position: relative;
 }
@@ -1137,7 +1137,7 @@ strong {
   }
 
   .main-header {
-    height: 350px;
+    height: 300px;
   }
 
   .footer-section {

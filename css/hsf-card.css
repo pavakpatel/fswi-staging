@@ -1,0 +1,95 @@
+
+/* HSF Info Card Styles */
+.hsf-info-card {
+  background-color: #243c68;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.hsf-logo-container {
+  flex-shrink: 0;
+}
+
+.hsf-logo {
+  width: 160px;
+  height: auto;
+  display: block;
+}
+
+.hsf-text-content {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.hsf-heading {
+  color: #dfe61d;
+  font-style: italic;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.hsf-divider {
+  width: 25px;
+  height: 3px;
+  background-color: #dfe61d;
+  margin-bottom: 15px;
+  border-radius: 2px;
+}
+
+.hsf-description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.highlight-yellow {
+  color: #dfe61d;
+  font-weight: 800;
+}
+
+.hsf-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.hsf-link:hover {
+  text-decoration: underline;
+  color: #dfe61d;
+}
+
+@media (max-width: 767px) {
+  .hsf-info-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 25px;
+  }
+  
+  .hsf-text-content {
+    text-align: center;
+  }
+  
+  .hsf-divider {
+    margin: 0 auto 15px auto;
+  }
+  
+  .hsf-logo {
+    width: 140px;
+    margin: 0 auto;
+  }
+}
