@@ -1185,9 +1185,9 @@ strong {
 
   .div-block-10.left {
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     height: auto;
-    padding-left: 65px;
+    padding-left: 20px;
   }
 
   .text-block-5 {
@@ -1599,9 +1599,21 @@ strong {
 
 .goal-title {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   color: #3e9f32;
   margin-bottom: 10px;
+  font-family: 'Kanit', sans-serif;
+}
+
+/* Mobile Break */
+.mobile-break {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .mobile-break {
+    display: block;
+  }
 }
 
 .progress-bar-bg {
@@ -1612,6 +1624,9 @@ strong {
   position: relative;
   overflow: hidden;
   box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .progress-bar-fill {
@@ -1622,17 +1637,19 @@ strong {
   /* Initial width, JS will animate */
   border-radius: 25px 0 0 25px;
   transition: width 1.5s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
 }
 
 .progress-text {
-  color: white;
+  color: #333;
   font-weight: bold;
   font-size: 14px;
   white-space: nowrap;
+  position: relative;
+  z-index: 2;
 }
 
 .goal-stats {
@@ -1645,7 +1662,32 @@ strong {
 
 .goal-subtext {
   margin-top: 10px;
-  font-size: 14px;
+  font-size: small;
   color: #777;
   font-style: italic;
+  /* font-family: 'Lato', sans-serif; removed */
+}
+
+@media screen and (max-width: 479px) {
+  .goal-tracker-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    /* Ensure full width usage */
+  }
+
+  .goal-title {
+    margin-bottom: 5px;
+    line-height: 1.3;
+  }
+
+  .goal-subtext {
+    margin-top: 5px;
+  }
+
+  /* Reducing margins on the parent container if needed */
+  .div-block-10.left {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
